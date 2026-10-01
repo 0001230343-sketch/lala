@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espaço Beleza Analahbeauty - Página Inicial</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos e Animações dos Botões */
+    .cta-btn {
+      width: 100%;
+      padding: 18px 24px;
+      background: linear-gradient(135deg, #ff1493, #e01083);
+      color: #ffffff;
+      font-weight: bold;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 1.15rem;
+      box-shadow: 0 6px 18px rgba(255, 20, 147, 0.4);
+      transition: all 0.2s ease-in-out;
+      display: block;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(255, 20, 147, 0.6);
+      background: linear-gradient(135deg, #ff2a9d, #f0188d);
+    }
+    .cta-btn:active {
+      transform: translateY(1px);
+      box-shadow: 0 3px 10px rgba(255, 20, 147, 0.4);
+    }
+
+    .btn-rosa-secundario {
+      width: 100%;
+      padding: 16px 24px;
+      background-color: #fff0f5;
+      color: #ff1493;
+      border: 2px solid #ff1493;
+      border-radius: 14px;
+      font-weight: bold;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      display: block;
+    }
+    .btn-rosa-secundario:hover {
+      background-color: #ffe6f2;
+      transform: translateY(-2px);
+    }
+    .btn-rosa-secundario:active {
+      transform: translateY(1px);
+    }
+
+    .servico-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .servico-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(255, 20, 147, 0.15);
+    }
+  </style>
+</head>
+<body style="background-color: #fff0f5; font-family: 'Segoe UI', sans-serif; color: #4a2c3d; margin: 0; min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Cabeçalho Principal -->
+  <header class="header-rosa" style="background: linear-gradient(135deg, #ff1493, #ce83bb); color: #fff; padding: 45px 20px; text-align: center; box-shadow: 0 4px 15px rgba(255, 20, 147, 0.25);">
+    <div class="header-icones" style="font-size: 1.8rem; margin-bottom: 8px;">✂️ 💅 💇‍♀️ 💄 🪞</div>
+    <h1 style="font-size: 2.5rem; margin: 0; font-weight: 700;">Espaço Beleza Analahbeauty</h1>
+    <p style="font-size: 1.15rem; margin-top: 8px; opacity: 0.95;">Cabelo, unhas e o cuidado especial que você merece ✨</p>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container" style="display: flex; justify-content: center; align-items: center; flex: 1; padding: 40px 20px;">
+    <div class="card-form landing-card" style="background: #ffffff; border: 2px solid #f8c8dc; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(206, 131, 187, 0.25); max-width: 500px; width: 100%; text-align: center;">
+      <div class="badge-boas-vindas" style="display: inline-block; background-color: #ffe6f2; color: #ff1493; padding: 8px 18px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin-bottom: 15px; border: 1px solid #ffb3da;">💖 Seu Momento de Beleza</div>
+      <h2 style="color: #d63384; font-size: 1.8rem; margin-bottom: 12px;">Bem-vinda ao Nosso Salão</h2>
+      <p class="descricao-home" style="color: #6c4f5f; font-size: 1rem; line-height: 1.5; margin-bottom: 25px;">
+        Oferecemos atendimento exclusivo com profissionais capacitadas para realçar o que você tem de melhor. Escolha o serviço ideal e agende seu horário online com facilidade!
+      </p>
+
+      <!-- Grade de Serviços com Ícones -->
+      <div class="servicos-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 30px;">
+        <div class="servico-card" style="background: #fff0f5; border: 2px solid #ffd1e8; padding: 16px 12px; border-radius: 14px; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+          <span class="icone-servico" style="font-size: 2rem;">✂️</span>
+          <span class="titulo-servico" style="font-size: 0.9rem; font-weight: bold; color: #b01863;">Corte & Escova</span>
+        </div>
+        <div class="servico-card" style="background: #fff0f5; border: 2px solid #ffd1e8; padding: 16px 12px; border-radius: 14px; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+          <span class="icone-servico" style="font-size: 2rem;">💅</span>
+          <span class="titulo-servico" style="font-size: 0.9rem; font-weight: bold; color: #b01863;">Manicure & Pedicure</span>
+        </div>
+        <div class="servico-card" style="background: #fff0f5; border: 2px solid #ffd1e8; padding: 16px 12px; border-radius: 14px; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+          <span class="icone-servico" style="font-size: 2rem;">🎨</span>
+          <span class="titulo-servico" style="font-size: 0.9rem; font-weight: bold; color: #b01863;">Coloração & Mechas</span>
+        </div>
+        <div class="servico-card" style="background: #fff0f5; border: 2px solid #ffd1e8; padding: 16px 12px; border-radius: 14px; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+          <span class="icone-servico" style="font-size: 2rem;">💇‍♀️</span>
+          <span class="titulo-servico" style="font-size: 0.9rem; font-weight: bold; color: #b01863;">Tratamento Capilar</span>
+        </div>
+        <div class="servico-card" style="background: #fff0f5; border: 2px solid #ffd1e8; padding: 16px 12px; border-radius: 14px; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+          <span class="icone-servico" style="font-size: 2rem;">💄</span>
+          <span class="titulo-servico" style="font-size: 0.9rem; font-weight: bold; color: #b01863;">Maquiagem Social</span>
+        </div>
+        <div class="servico-card" style="background: #fff0f5; border: 2px solid #ffd1e8; padding: 16px 12px; border-radius: 14px; display: flex; flex-direction: column; align-items: center; gap: 6px;">
+          <span class="icone-servico" style="font-size: 2rem;">✨</span>
+          <span class="titulo-servico" style="font-size: 0.9rem; font-weight: bold; color: #b01863;">Design Sobrancelhas</span>
+        </div>
+      </div>
+
+      <!-- Botões Principais -->
+      <div class="acoes-home" style="display: flex; flex-direction: column; gap: 15px;">
+        <button type="button" class="cta-btn btn-full" id="btnHomeAgendar">
+          📅 Agendar Horário (07h às 17h)
+        </button>
+        <button type="button" class="btn-rosa-secundario" id="btnHomeLogin">
+          🔐 Já tenho conta / Entrar
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer style="padding: 18px 20px; background-color: #ffe6f2; color: #b01863; text-align: center; font-size: 0.9rem; font-weight: 600; border-top: 1px solid #ffd1e8;">
+    <p style="margin: 0;">🌸 Atendimento de Segunda a Sexta-feira | Espaço Beleza Analahbeauty 🌸</p>
+  </footer>
+
+  <!-- Script para Ativação dos Botões -->
+  <script>
+    document.getElementById('btnHomeAgendar').addEventListener('click', function() {
+      window.location.href = 'cadastro.html'; 
+    });
+
+    document.getElementById('btnHomeLogin').addEventListener('click', function() {
+      window.location.href = 'login.html'; 
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

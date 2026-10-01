@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espaço Beleza & Estilo - Login e Agendamento</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos dos Botões com Animações e Efeitos */
+    .btn-rosa-principal {
+      width: 100%;
+      padding: 18px 24px;
+      background: linear-gradient(135deg, #ff1493, #e01083);
+      color: #ffffff;
+      font-weight: bold;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 1.15rem;
+      box-shadow: 0 6px 18px rgba(255, 20, 147, 0.4);
+      margin-top: 15px;
+      transition: all 0.2s ease-in-out;
+    }
+    .btn-rosa-principal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(255, 20, 147, 0.6);
+      background: linear-gradient(135deg, #ff2a9d, #f0188d);
+    }
+    .btn-rosa-principal:active {
+      transform: translateY(1px);
+      box-shadow: 0 3px 10px rgba(255, 20, 147, 0.4);
+    }
+
+    .btn-rosa-secundario {
+      width: 100%;
+      padding: 16px 24px;
+      background-color: #fff0f5;
+      color: #ff1493;
+      border: 2px solid #ff1493;
+      border-radius: 14px;
+      font-weight: bold;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    .btn-rosa-secundario:hover {
+      background-color: #ffe6f2;
+      transform: translateY(-2px);
+    }
+    .btn-rosa-secundario:active {
+      transform: translateY(1px);
+    }
+
+    .btn-hora {
+      padding: 16px 0;
+      background-color: #fff0f5;
+      color: #ff1493;
+      border: 2px solid #ff1493;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    .btn-hora:hover {
+      background-color: #ff1493;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+    .btn-hora:active, .btn-hora.ativo {
+      background-color: #d63384;
+      color: #ffffff;
+      border-color: #d63384;
+    }
+  </style>
+</head>
+<body style="background-color: #fff0f5; font-family: 'Segoe UI', sans-serif; color: #4a2c3d; margin: 0; min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Cabeçalho Principal com Espaçamento Amplo -->
+  <header style="background: linear-gradient(135deg, #ff1493, #ce83bb); color: #ffffff; padding: 50px 20px; text-align: center; box-shadow: 0 4px 15px rgba(255, 20, 147, 0.25);">
+    <div style="font-size: 2.3rem; margin-bottom: 16px;">✂️ 💅 💇‍♀️ 💄 🪞 🧴 🌸 ✨ 👑 💋</div>
+    <h1 style="font-size: 2.6rem; margin: 0; font-weight: 700;">Espaço Beleza & Estilo</h1>
+    <p style="font-size: 1.2rem; margin-top: 14px; opacity: 0.95;">Cabelo, unhas e o cuidado especial que você merece ✨💖</p>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container" style="display: flex; justify-content: center; align-items: center; flex: 1; padding: 60px 20px;">
+    
+    <!-- Cartão 1: Formulário de Login -->
+    <div class="card-form" id="cardLogin" style="background: #ffffff; border: 2px solid #f8c8dc; padding: 50px 40px; border-radius: 24px; box-shadow: 0 12px 35px rgba(206, 131, 187, 0.25); max-width: 500px; width: 100%; text-align: center;">
+      <span style="display: inline-block; background-color: #ffe6f2; color: #ff1493; padding: 10px 22px; border-radius: 20px; font-size: 0.95rem; font-weight: bold; border: 1px solid #ffb3da; margin-bottom: 25px;">💖 ÁREA DO CLIENTE 💅</span>
+      <h2 style="color: #d63384; font-size: 1.9rem; margin-bottom: 30px;">🔐 Acessar sua Conta</h2>
+      
+      <form id="formLogin" style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 10px; text-align: left;">
+          <label for="loginEmail" style="font-weight: bold; color: #b01863; font-size: 1rem;">📧 E-mail</label>
+          <input type="email" id="loginEmail" required placeholder="seu@email.com" style="padding: 16px; border: 2px solid #ffd1e8; border-radius: 14px; font-size: 1rem; outline: none; background: #fff0f5; color: #4a2c3d;">
+        </div>
+
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 10px; text-align: left;">
+          <label for="loginSenha" style="font-weight: bold; color: #b01863; font-size: 1rem;">🔑 Senha</label>
+          <input type="password" id="loginSenha" required placeholder="Digite sua senha" style="padding: 16px; border: 2px solid #ffd1e8; border-radius: 14px; font-size: 1rem; outline: none; background: #fff0f5; color: #4a2c3d;">
+        </div>
+
+        <button type="submit" class="btn-rosa-principal">
+          Entrar ✨💖
+        </button>
+      </form>
+      
+      <div class="box-alternar" style="margin-top: 35px; padding-top: 25px; border-top: 2px dashed #ffd1e8;">
+        <p style="color: #6c4f5f; font-size: 1rem; margin-bottom: 16px;">Ainda não tem conta? 🌸</p>
+        <button type="button" class="btn-rosa-secundario" id="btnIrCadastro">
+          👤 Cadastre-se Já ✨
+        </button>
+      </div>
+    </div>
+
+    <!-- Cartão 2: Formulário de Cadastro (Oculto inicialmente) -->
+    <div class="card-form hidden" id="cardCadastro" style="background: #ffffff; border: 2px solid #f8c8dc; padding: 50px 40px; border-radius: 24px; box-shadow: 0 12px 35px rgba(206, 131, 187, 0.25); max-width: 500px; width: 100%; text-align: center;">
+      <span style="display: inline-block; background-color: #ffe6f2; color: #ff1493; padding: 10px 22px; border-radius: 20px; font-size: 0.95rem; font-weight: bold; border: 1px solid #ffb3da; margin-bottom: 25px;">🌸 NOVO CADASTRO ✨</span>
+      <h2 style="color: #d63384; font-size: 1.9rem; margin-bottom: 30px;">👤 Criar Conta</h2>
+
+      <form id="formCadastro" style="display: flex; flex-direction: column; gap: 22px;">
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 10px; text-align: left;">
+          <label for="cadNome" style="font-weight: bold; color: #b01863; font-size: 1rem;">👤 Nome Completo</label>
+          <input type="text" id="cadNome" required placeholder="Seu nome completo" style="padding: 16px; border: 2px solid #ffd1e8; border-radius: 14px; font-size: 1rem; background: #fff0f5; color: #4a2c3d;">
+        </div>
+
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 10px; text-align: left;">
+          <label for="cadEmail" style="font-weight: bold; color: #b01863; font-size: 1rem;">📧 E-mail</label>
+          <input type="email" id="cadEmail" required placeholder="seu@email.com" style="padding: 16px; border: 2px solid #ffd1e8; border-radius: 14px; font-size: 1rem; background: #fff0f5; color: #4a2c3d;">
+        </div>
+
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 10px; text-align: left;">
+          <label for="cadSenha" style="font-weight: bold; color: #b01863; font-size: 1rem;">🔒 Senha</label>
+          <input type="password" id="cadSenha" minlength="6" required placeholder="Mínimo 6 caracteres" style="padding: 16px; border: 2px solid #ffd1e8; border-radius: 14px; font-size: 1rem; background: #fff0f5; color: #4a2c3d;">
+        </div>
+
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 10px; text-align: left;">
+          <label for="cadConfirmarSenha" style="font-weight: bold; color: #b01863; font-size: 1rem;">🔐 Confirmar Senha</label>
+          <input type="password" id="cadConfirmarSenha" required placeholder="Confirme sua senha" style="padding: 16px; border: 2px solid #ffd1e8; border-radius: 14px; font-size: 1rem; background: #fff0f5; color: #4a2c3d;">
+        </div>
+
+        <button type="submit" class="btn-rosa-principal">
+          Finalizar Cadastro ✨
+        </button>
+      </form>
+
+      <div class="box-alternar" style="margin-top: 35px; padding-top: 25px; border-top: 2px dashed #ffd1e8;">
+        <p style="color: #6c4f5f; font-size: 1rem; margin-bottom: 16px;">Já possui uma conta? 💖</p>
+        <button type="button" class="btn-rosa-secundario" id="btnIrLogin">
+          🔐 Faça Login
+        </button>
+      </div>
+    </div>
+
+    <!-- Cartão 3: Painel de Agendamento -->
+    <div class="card-form hidden" id="cardAgenda" style="background: #ffffff; border: 2px solid #f8c8dc; padding: 50px 40px; border-radius: 24px; box-shadow: 0 12px 35px rgba(206, 131, 187, 0.25); max-width: 550px; width: 100%;">
+      <div class="agenda-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2 style="color: #d63384; font-size: 1.8rem; margin: 0;">📅 Agendar Horário</h2>
+        <button id="btnSair" class="btn-rosa-secundario" style="width: auto; padding: 10px 20px; font-size: 0.95rem;">Sair 🚪</button>
+      </div>
+      
+      <p class="subtitulo-agenda" style="color: #6c4f5f; font-size: 1rem; text-align: center; margin-bottom: 30px;">Atendimento de <strong>Segunda a Sexta-feira</strong> 🗓️</p>
+      
+      <form id="formAgenda" style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 10px; text-align: left;">
+          <label for="agendaServico" style="font-weight: bold; color: #b01863; font-size: 1rem;">💇‍♀️ Serviço Desejado</label>
+          <select id="agendaServico" required style="padding: 16px; border: 2px solid #ffd1e8; border-radius: 14px; font-size: 1rem; background: #fff0f5; color: #4a2c3d;">
+            <option value="">Selecione o serviço...</option>
+            <option value="Cabelo - Corte & Escova">✂️ Cabelo - Corte & Escova</option>
+            <option value="Manicure & Pedicure">💅 Manicure & Pedicure</option>
+            <option value="Coloração / Mechas">🎨 Coloração / Mechas</option>
+            <option value="Tratamento Capilar">🧴 Tratamento Capilar</option>
+            <option value="Design de Sobrancelhas">✨ Design de Sobrancelhas</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 10px; text-align: left;">
+          <label for="agendaData" style="font-weight: bold; color: #b01863; font-size: 1rem;">📆 Data (Segunda a Sexta)</label>
+          <input type="date" id="agendaData" required style="padding: 16px; border: 2px solid #ffd1e8; border-radius: 14px; font-size: 1rem; background: #fff0f5; color: #4a2c3d;">
+        </div>
+
+        <!-- Grade de Horários com Maior Espaçamento -->
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 12px; text-align: left;">
+          <label style="font-weight: bold; color: #b01863; font-size: 1rem;">⏰ Escolha o Horário (07:00 às 17:00)</label>
+          <div class="horarios-grid" id="horariosGrid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px;">
+            <button type="button" class="btn-hora" data-hora="07:00">⏰ 07:00</button>
+            <button type="button" class="btn-hora" data-hora="08:00">⏰ 08:00</button>
+            <button type="button" class="btn-hora" data-hora="09:00">⏰ 09:00</button>
+            <button type="button" class="btn-hora" data-hora="10:00">⏰ 10:00</button>
+            <button type="button" class="btn-hora" data-hora="11:00">⏰ 11:00</button>
+            <button type="button" class="btn-hora" data-hora="12:00">⏰ 12:00</button>
+            <button type="button" class="btn-hora" data-hora="13:00">⏰ 13:00</button>
+            <button type="button" class="btn-hora" data-hora="14:00">⏰ 14:00</button>
+            <button type="button" class="btn-hora" data-hora="15:00">⏰ 15:00</button>
+            <button type="button" class="btn-hora" data-hora="16:00">⏰ 16:00</button>
+            <button type="button" class="btn-hora" data-hora="17:00">⏰ 17:00</button>
+          </div>
+          <input type="hidden" id="agendaHora" required>
+        </div>
+
+        <button type="submit" class="btn-rosa-principal">
+          Confirmar Agendamento ✨💖
+        </button>
+      </form>
+
+      <!-- Lista de Agendamentos Realizados -->
+      <div class="lista-agendamentos" style="margin-top: 40px; border-top: 2px dashed #ffd1e8; padding-top: 25px;">
+        <h3 style="color: #d63384; font-size: 1.3rem; margin-bottom: 20px; text-align: center;">📋 Seus Agendamentos</h3>
+        <ul id="listaHorarios" style="list-style: none; padding: 0;">
+          <!-- Agendamentos entram via JS -->
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer style="padding: 24px 20px; background-color: #ffe6f2; color: #b01863; text-align: center; font-size: 0.95rem; font-weight: 600; border-top: 1px solid #ffd1e8;">
+    <p style="margin: 0;">🌸 Atendimento de Segunda a Sexta-feira | Espaço Beleza & Estilo 💅✨</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

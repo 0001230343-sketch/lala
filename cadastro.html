@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Espaço Beleza & Estilo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos dos Botões com Animações e Efeitos */
+    .btn-rosa-principal {
+      width: 100%;
+      padding: 18px 24px;
+      background: linear-gradient(135deg, #ff1493, #e01083);
+      color: #ffffff;
+      font-weight: bold;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 1.15rem;
+      box-shadow: 0 6px 18px rgba(255, 20, 147, 0.4);
+      margin-top: 15px;
+      transition: all 0.2s ease-in-out;
+      display: block;
+    }
+    .btn-rosa-principal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(255, 20, 147, 0.6);
+      background: linear-gradient(135deg, #ff2a9d, #f0188d);
+    }
+    .btn-rosa-principal:active {
+      transform: translateY(1px);
+      box-shadow: 0 3px 10px rgba(255, 20, 147, 0.4);
+    }
+
+    .link-login {
+      color: #ff1493;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .link-login:hover {
+      color: #d63384;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body style="background-color: #fff0f5; font-family: 'Segoe UI', sans-serif; color: #4a2c3d; margin: 0; min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Cabeçalho Principal -->
+  <header style="background: linear-gradient(135deg, #ff1493, #ce83bb); color: #ffffff; padding: 50px 20px; text-align: center; box-shadow: 0 4px 15px rgba(255, 20, 147, 0.25);">
+    <div style="font-size: 2.3rem; margin-bottom: 16px;">✂️ 💅 Aqui está a estrutura do código HTML corrigida e organizada, incluindo o fechamento correto de todas as tags que estavam incompletas no seu e-mail:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Espaço Beleza & Estilo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Espaço Beleza & Estilo</h1>
+        <p>Painel Administrativo do Salão</p>
+    </header>
+
+    <div class="container">
+        <div class="box-painel">
+            <h2 class="titulo-secao">🔐 Acessar Painel</h2>
+            <form id="formLogin">
+                <div class="form-group">
+                    <label for="loginEmail">E-mail Corporativo</label>
+                    <input type="email" id="loginEmail" required placeholder="seu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="loginSenha">Senha</label>
+                    <input type="password" id="loginSenha" required placeholder="Digite sua senha">
+                </div>
+                <button type="submit" class="btn-entrar">Entrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
